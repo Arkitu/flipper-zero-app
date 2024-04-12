@@ -1,0 +1,23 @@
+cargo-features = ["different-binary-name"]
+
+[package]
+name = "flipper-zero-app"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.64.0"
+autobins = false
+autoexamples = false
+autotests = false
+autobenches = false
+
+[[bin]]
+name = "flipper-zero-app"
+filename = "flipper-zero-app.fap"
+bench = false
+test = false
+
+[dependencies]
+flipperzero = { git = "https://github.com/flipperzero-rs/flipperzero.git" }
+flipperzero-sys = { git = "https://github.com/flipperzero-rs/flipperzero.git" }
+flipperzero-rt = { git = "https://github.com/flipperzero-rs/flipperzero.git" }
+flipperzero-alloc = { git = "https://github.com/flipperzero-rs/flipperzero.git" }
